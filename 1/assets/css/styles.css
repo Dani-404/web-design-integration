@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Oswald Regular';
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald SemiBold';
+    src: url('../fonts/Oswald-SemiBold.otf');
+}
+
+@font-face {
+    font-family: 'Oswald Bold';
+    src: url('../fonts/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('../fonts/Montserrat-Light.otf');
+}
+
+body {
+    font-family: 'Oswald Regular';
+}
+
+.resize {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.center {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.orange {
+    background-color: #e8631c;
+    color: #FFF;
+}
+
+.grey {
+    background-color: #303030;
+    color: #FFF;
+}
+
+section, footer {
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    z-index: 5;
+}
+
+header .logo {
+    transition-duration: 0.5s;
+}
+
+header .logo:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+header .flex {
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header ul li {
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 22px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 0.5s;
+}
+
+header ul li:hover {
+    border-color: #FFF;
+    cursor: pointer;
+}
+
+header .search, header .burger {
+    margin-left: auto;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+
+header .search:hover, header .burger:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+header .burger {
+    height: 25px;
+    display: none;
+}
+
+header form {
+    position: absolute;
+    display: flex;
+    margin-top: 10px;
+    left: 0;
+    width: calc(100% - 20px);
+    display: none;
+    overflow: hidden;
+}
+
+header form input {
+    border: none;
+    padding: 15px;
+}
+
+header form input[type="text"] {
+    width: calc(70% - 30px);
+}
+
+header form input[type="submit"] {
+    width: 30%;
+    font-family: 'Oswald SemiBold';
+    font-size: 16px;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+
+header form input[type="submit"]:hover {
+    background-color: #e67234;
+    cursor: pointer;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section .title {
+    font-family: 'Oswald Bold';
+    color: #FFF;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+section .desc {
+    font-family: 'Montserrat Light';
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+section.home {
+    background-image: url('../images/banner_1.png');
+    background-size: cover;
+    background-position: right bottom;
+    display: flex;
+    align-items: center;
+}
+
+section.home .content {
+    width: 40%;
+    color: #FFF;
+    margin-left: 5%;
+    padding: 50px;
+}
+
+section.home .content h1 {
+    margin-top: 20%;
+    font-weight: normal;
+    font-size: 120px;
+}
+
+section.home .content span {
+    font-family: 'Montserrat Light';
+    font-size: 20px;
+    display: block;
+    margin-bottom: 80px;
+}
+
+section.home .content button {
+    display: block;
+    font-family: 'Oswald Regular';
+    font-size: 24px;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px 80px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+section.home .content button:hover {
+    background-color: #cf642a;
+    cursor: pointer;
+}
+
+section.dance_tour, section.pricing, section.newsletter {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+section.dance_tour::before, section.newsletter::before {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    top: -450px;
+    left: 0;
+    width: 932px;
+    height: 1195px;
+}
+
+section.dance_tour .resize, section.pricing .resize, section.newsletter .resize {
+    position: relative;
+    z-index: 1;
+}
+
+section.dance_tour .cards {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+section.dance_tour .cards img {
+    width: 100%;
+}
+
+section.dance_tour .cards .content {
+    padding: 15px;
+}
+
+section.dance_tour .cards .content h1 {
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+
+section.dance_tour .cards .content span {
+    font-family: 'Montserrat Light';
+}
+
+section.pricing::before {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    top: -500px;
+    left: 0;
+    width: 932px;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(192deg) brightness(109%) contrast(100%);
+    height: 1195px;
+    opacity: 0.7;
+}
+
+section.pricing::after {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    bottom: -500px;
+    right: 0;
+    width: 932px;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(192deg) brightness(109%) contrast(100%);
+    height: 1195px;
+    transform: rotate(180deg);
+    opacity: 0.7;
+}
+
+section.newsletter::after {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    bottom: -500px;
+    right: 0;
+    width: 932px;
+    height: 1195px;
+    transform: rotate(180deg);
+    opacity: 0.7;
+}
+
+
+section.pricing .cards {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+section.pricing .cards figure {
+    width: calc(25% - 50px);
+    max-width: 250px;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+section.pricing .cards figure:hover button {
+    background-color: #4b4949;
+}
+
+section.pricing .cards figure img {
+    margin-bottom: 20px;
+}
+
+section.pricing .cards figure h1 {
+    font-family: 'Oswald SemiBold';
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+section.pricing .cards figure span {
+    font-family: 'Montserrat Light';
+}
+
+section.pricing .cards figure button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    font-family: 'Oswald Regular';
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+section.dance {
+    overflow: hidden;
+}
+
+section.dance .card {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+section.dance .card::before {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    bottom: -500px;
+    right: 0;
+    width: 932px;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(192deg) brightness(109%) contrast(100%);
+    height: 1195px;
+    transform: rotate(180deg);
+    opacity: 0.7;
+}
+
+section.dance .card:nth-child(even)::before {
+    content: '';
+    background-image: url('../images/design.png');
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    width: 932px;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(192deg) brightness(109%) contrast(100%);
+    height: 1195px;
+    opacity: 0.7;
+    transform: rotate(-90deg);
+}
+
+section.dance .card .img {
+    width: 50%;
+    position: relative;
+    background-image: url('../images/dance.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+section.dance .card:nth-child(even) .img {
+    background-image: url('../images/dance2.png');
+}
+
+section.dance .content {
+    width: calc(50% - 10%);
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+section.dance .content h1 {
+    font-family: 'Oswald Bold';
+    margin-bottom: 10%;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+section.dance .content p {
+    font-family: 'Montserrat Light';
+    font-size: 25px;
+}
+
+section.dance .content button {
+    display: block;
+    max-width: calc(100% - 30px);
+    margin-top: 20%;
+    font-family: 'Oswald Regular';
+    padding: 15px 100px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    text-transform: uppercase;
+}
+
+section.dance .content button:hover {
+    background-color: #4b4949;
+    cursor: pointer;
+}
+
+section.statistics .stats {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    text-align: center;
+}
+
+section.statistics .stats .row h1 {
+    font-family: 'Oswald Bold';
+    font-size: 50px;
+}
+
+section.statistics .stats .row span {
+    font-family: 'Montserrat Light';
+    font-size: 20px;
+}
+
+section.citation {
+    background-image: url('../images/banner_2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+}
+
+section.citation .content {
+    width: 50%;
+    margin: auto;
+}
+
+section.citation .content p {
+    font-family: 'Montserrat Light';
+    font-size: 25px;
+    margin-bottom: 5%;
+}
+
+section.citation .content span {
+    font-family: 'Oswald Bold';
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+section.newsletter {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    min-height: auto !important;
+}
+
+section.newsletter .desc {
+    margin-bottom: 40px;
+}
+
+section.newsletter form {
+    display: flex;
+    justify-content: center;
+}
+
+section.newsletter input {
+    padding: 10px;
+    border: none;
+}
+
+section.newsletter input[type="text"] {
+    font-size: 14px;
+    font-family: 'Montserrat Light';
+    width: 20%;
+}
+
+section.newsletter input[type="submit"] {
+    font-family: 'Oswald SemiBold';
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 80px;
+    transition-duration: 0.5s;
+}
+
+section.newsletter input[type="submit"]:hover {
+    background-color: #4b4949;
+    cursor: pointer;
+}
+
+footer {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-family: 'Montserrat Light';
+}
+
+footer .category:first-child {
+    width: 40%;
+}
+
+footer .category h1 {
+    font-family: 'Oswald Regular';
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer .category ul.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+footer .category ul li {
+    opacity: 0.8;
+    margin-bottom: 10px;
+    transition-duration: 0.5s;
+}
+
+footer .category ul li:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+footer .navigation {
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+}
+
+footer .navigation .category:first-child {
+    width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    section.home .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section.home .content {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    section.home .content button {
+        margin: auto;
+    }
+
+    section.dance_tour .cards, section.pricing .cards {
+        flex-wrap: wrap;
+    }
+
+    section.dance_tour .cards figure {
+        margin-bottom: 5%;
+    }
+
+    section.pricing .cards figure {
+        width: calc(100% - 50px);
+        margin-bottom: 5%;
+    }
+
+    section.dance .content button {
+        padding: 15px 50px;
+        font-size: 20px
+    }
+}
+
+@media screen and (min-width: 851px) {
+    header ul {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    footer .flex {
+        display: block;
+    }
+
+    footer .category:first-child {
+        width: 100%;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    footer .category ul.social {
+        justify-content: center;
+    }
+
+    footer .navigation {
+        justify-content: space-between;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header .burger {
+        display: block;
+    }
+
+    header ul {
+        position: absolute;
+        right: 20px;
+        top: 87px;
+        background-color: #303030;
+        height: calc(100vh - 87px);
+        overflow-y: auto;
+        padding: 10px 50px 10px 20px;
+        display: none;
+    }
+
+    header ul li {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
