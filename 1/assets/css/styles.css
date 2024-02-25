@@ -218,7 +218,7 @@ section.home .content button:hover {
     cursor: pointer;
 }
 
-section.dance_tour, section.pricing, section.newsletter {
+section.dance_tour, section.pricing, section.newsletter, section.statistics {
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -360,6 +360,7 @@ section.dance .card {
     position: relative;
     overflow: hidden;
     height: 100vh;
+    min-height: 550px;
 }
 
 section.dance .card::before {
@@ -399,6 +400,7 @@ section.dance .card .img {
 
 section.dance .card:nth-child(even) .img {
     background-image: url('../images/dance2.png');
+    background-position: 80% center;
 }
 
 section.dance .content {
