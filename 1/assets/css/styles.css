@@ -501,14 +501,14 @@ section.newsletter form {
 }
 
 section.newsletter input {
-    padding: 10px;
+    padding: 15px;
     border: none;
 }
 
 section.newsletter input[type="text"] {
     font-size: 14px;
     font-family: 'Montserrat Light';
-    width: 20%;
+    width: calc(50% - 30px);
 }
 
 section.newsletter input[type="submit"] {
@@ -651,6 +651,30 @@ footer .navigation .category:first-child {
     header ul li {
         margin-bottom: 20px;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.statistics .stats {
+        flex-wrap: wrap;
+    }
+
+    section.statistics .stats .row {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    section.newsletter form {
+        flex-wrap: wrap;
+    }
+
+    section.newsletter input[type="text"] {
+        width: calc(100% - 30px);
+        margin-bottom: 20px;
+    }
+
+    section.newsletter input[type="submit"] {
+        width: 100%;
     }
 }
 
